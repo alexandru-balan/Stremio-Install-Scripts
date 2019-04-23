@@ -1,0 +1,25 @@
+name       : stremio
+version    : 4.4.52
+release    : 1
+source     :
+    - git|https://github.com/Stremio/stremio-shell.git : 4.4.52
+license    : GPL-3.0-or-later
+component  : desktop.multimedia
+summary    : All the Video Content You Enjoy in One Place
+description: |
+    Stremio is a one-stop hub for video content aggregation. Discover, organize and watch video from all kind of sources on any device that you own. Movies, TV shows, series, live television or web channels like YouTube and Twitch.tv - you can find all this on Stremio.
+builddeps  :   
+    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5WebEngine)
+    - pkgconfig(librsvg-2.0)
+    - pkgconfig(mpv)
+    - wget
+    - nodejs
+rundeps    :   
+    - qt5-quickcontrols
+    - qt5-quickcontrols2
+build      : |
+    %qmake PREFIX="$installdir"
+    %make -f release.makefile
+install    : |
+    %make_install -f release.makefile PREFIX="$installdir"

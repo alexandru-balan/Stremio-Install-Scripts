@@ -1,0 +1,31 @@
+--- ./build/Makefile	2019-04-22 18:53:14.576063109 +0300
++++ ./build/Makefile	2019-04-22 18:59:55.196251599 +0300
+@@ -692,22 +692,19 @@
+ ####### Install
+ 
+ install_static: first FORCE
+-	@test -d $(INSTALL_ROOT)/opt/stremio || mkdir -p $(INSTALL_ROOT)/opt/stremio
+-	-$(QINSTALL) /home/prongs/Documents/github/stremio-shell/smartcode-stremio.desktop $(INSTALL_ROOT)/opt/stremio/smartcode-stremio.desktop
++	@test -d $(INSTALL_ROOT)/usr/share/applications/ || mkdir -p $(INSTALL_ROOT)/usr/share/applications/
++	-$(QINSTALL) /home/prongs/Documents/github/stremio-shell/smartcode-stremio.desktop $(INSTALL_ROOT)/usr/share/applications/smartcode-stremio.desktop
+ 
+ uninstall_static: FORCE
+-	-$(DEL_FILE) -r $(INSTALL_ROOT)/opt/stremio/smartcode-stremio.desktop
+-	-$(DEL_DIR) $(INSTALL_ROOT)/opt/stremio/ 
++	-$(DEL_FILE) -r $(INSTALL_ROOT)/usr/share/applications/smartcode-stremio.desktop
+ 
+ 
+ install_target: first FORCE
+-	@test -d $(INSTALL_ROOT)/opt/stremio || mkdir -p $(INSTALL_ROOT)/opt/stremio
+-	-$(QINSTALL_PROGRAM) $(QMAKE_TARGET) $(INSTALL_ROOT)/opt/stremio/$(QMAKE_TARGET)
++	@test -d $(INSTALL_ROOT)/usr/bin/ || mkdir -p $(INSTALL_ROOT)/usr/bin/
++	-$(QINSTALL_PROGRAM) $(QMAKE_TARGET) $(INSTALL_ROOT)/usr/bin/$(QMAKE_TARGET)
+ 
+ uninstall_target: FORCE
+-	-$(DEL_FILE) $(INSTALL_ROOT)/opt/stremio/$(QMAKE_TARGET)
+-	-$(DEL_DIR) $(INSTALL_ROOT)/opt/stremio/ 
+-
++	-$(DEL_FILE) $(INSTALL_ROOT)/usr/bin/$(QMAKE_TARGET)
+ 
+ install: install_static install_target  FORCE
+ 
