@@ -17,4 +17,10 @@ qmake
 make -f release.makefile
 sudo make -f release.makefile install
 sudo ./dist-utils/common/postinstall
+
+# Cleaning up
+rm -rf ./*
+cd .. && rmdir stremio-shell
+cd .. && rmdir github
+
 echo DONE

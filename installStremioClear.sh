@@ -32,5 +32,10 @@ make -f release.makefile
 sudo make -f release.makefile install
 sudo ./dist-utils/common/postinstall
 
-# TO-DO: Cleanup all the files
+# Cleanup all the files
+rm -rf ./*
+cd .. && rmdir stremio-shell
+cd .. && rmdir github
+
+
 echo DONE!!!
