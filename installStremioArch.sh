@@ -1,16 +1,11 @@
-# Installer for Stremio on Clear Linux
-clear
-echo "####################################################"
-echo "#WARNING: This will probably take a lot of time !!!#"
-echo "####################################################"
-sleep 3s
+# Installer for Stremio on Arch Linux
 clear
 
 # Downloading the dependencies
 echo "Installing Stremio"
 echo "__________________"
 sleep 1s
-sudo swupd bundle-add git nodejs-basic wget mpv qt-basic-dev devpkg-qtwebengine lib-qt5webengine c-basic
+sudo pacman -S git wget librsvg nodejs mpv openssl make gcc qt5-base qt5-webengine qt5-quickcontrols qt5-quickcontrols2
 
 # Downloading Stremio
 echo "Downloading Stremio"
@@ -18,11 +13,6 @@ echo "___________________"
 cd ~/Documents && mkdir github && cd github
 git clone --recurse-submodules https://github.com/Stremio/stremio-shell.git
 cd stremio-shell
-
-# Patching linking 
-echo "Patching mpv libraries"
-echo "______________________"
-sudo ln -s /usr/lib/libmpv.so.1 /usr/lib/libmpv.so
 
 # Compiling and installing Stremio
 echo "Compiling and installing stremio"
