@@ -31,5 +31,5 @@ A repository containing scripts that  are meant to install Stremio and its depen
 0. `sudo pacman -S git` <-- Installs git so you can download my scripts
 1. `git clone https://gitlab.com/alexandru-balan/stremio-install-scripts.git` <-- Downloads the script
 2. `cd Stremio-Install-Scripts` <-- Moves into the downloaded folder
-3. `chmod 755 installStremioClear.sh` <-- Makes the script executable
+3. `chmod 755 installStremioArch.sh` <-- Makes the script executable
 4. `./installStremioArch.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
