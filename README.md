@@ -2,6 +2,18 @@
 
 A repository containing scripts that  are meant to install Stremio and its dependencies on systems that do not provide an official installation for Stremio.
 
+# Disclaimer:
+
+You probably need the proprietary media codecs in order to be able to play any online content with stremio, so before running the script I advise you to search for how to install them on your **speciffic distribution** as the setps may vary.
+
+**Solus users:** you have the codecs preinstalled out of the box.
+
+**Fedora users:** you shoud see how to install rpmfusion repos (both free and non-free) then install all the codecs through the software center.
+
+**Arch users:** if not already installed, then you shoud probably install gstreamer and ffmpeg
+
+**Clear Linux users:** https://community.clearlinux.org/t/how-to-h264-etc-support-for-firefox-including-ffmpeg-install/195
+
 ## Install on Fedora 30
 
 0. `sudo dnf install git` <-- Installs git so you can download my scripts
