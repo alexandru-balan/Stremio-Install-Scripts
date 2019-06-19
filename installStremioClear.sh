@@ -24,7 +24,8 @@ cd stremio-shell
 echo "----------------------"
 echo "Patching mpv libraries"
 echo "----------------------"
-sudo ln -s /usr/lib/libmpv.so.1 /usr/lib/libmpv.so
+# Linking no needed anymore as the file name appears to be alright now by default
+sudo ln -s /usr/lib64/libmpv.so.1 /usr/lib64/libmpv.so
 
 # Compiling and installing Stremio
 echo "--------------------------------"
