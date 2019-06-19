@@ -6,7 +6,7 @@ echo "------------------"
 echo "Installing Stremio"
 echo "------------------"
 sleep 1s
-sudo pacman -S git wget librsvg nodejs mpv openssl make gcc qt5-base qt5-webengine qt5-quickcontrols qt5-quickcontrols2
+sudo pacman -S wget librsvg nodejs mpv openssl make gcc qt5-base qt5-webengine qt5-quickcontrols qt5-quickcontrols2
 
 # Downloading Stremio
 echo "-------------------"

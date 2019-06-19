@@ -4,7 +4,7 @@ echo -----------------------
 echo Installing Dependencies
 echo -----------------------
 sleep 1s
-sudo dnf install git nodejs wget librsvg2-devel librsvg2-tools mpv-libs-devel qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtquickcontrols qt5-qtquickcontrols2 openssl-devel gcc g++ make glibc-devel kernel-headers binutils -y
+sudo dnf install nodejs wget librsvg2-devel librsvg2-tools mpv-libs-devel qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtquickcontrols qt5-qtquickcontrols2 openssl-devel gcc g++ make glibc-devel kernel-headers binutils -y
 echo ----------------------------
 echo Getting Stremio from the web
 echo ----------------------------

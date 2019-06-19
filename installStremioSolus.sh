@@ -4,7 +4,7 @@ echo -----------------------
 echo Installing Dependencies
 echo -----------------------
 sleep 1s
-sudo eopkg it git nodejs wget mpv-libs-devel make qt5-base-devel qt5-webengine-devel qt5-quickcontrols qt5-quickcontrols2 openssl-devel librsvg-devel gcc g++ glibc-devel binutils libtool-devel linux-headers
+sudo eopkg it nodejs wget mpv-libs-devel make qt5-base-devel qt5-webengine-devel qt5-quickcontrols qt5-quickcontrols2 openssl-devel librsvg-devel gcc g++ glibc-devel binutils libtool-devel linux-headers
 echo -------------------
 echo Downloading Stremio
 echo -------------------

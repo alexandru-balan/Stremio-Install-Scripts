@@ -11,7 +11,7 @@ echo "------------------"
 echo "Installing Stremio"
 echo "------------------"
 sleep 1s
-sudo swupd bundle-add git nodejs-basic wget mpv qt-basic-dev devpkg-qtwebengine lib-qt5webengine c-basic
+sudo swupd bundle-add nodejs-basic wget mpv qt-basic-dev devpkg-qtwebengine lib-qt5webengine c-basic
 
 # Downloading Stremio
 echo "-------------------"
