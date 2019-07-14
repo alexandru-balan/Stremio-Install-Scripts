@@ -25,9 +25,7 @@ sudo make -f release.makefile install
 sudo ./dist-utils/common/postinstall
 
 # Cleanup all the files
-rm -rf *
-rm -rf .*
-cd .. && rmdir stremio-shell
-
+cd ..
+rm -rf stremio-shell
 
 echo DONE!!!
