@@ -1,3 +1,6 @@
+# IMPORTANT ANNOUNCEMENT
+# Since I am a big open source advocate I want to host my code on a platform that embraces the same pinciples as mine. Therefore, all the code he is now declared obsolete. The development will continue now on [Codeberg](https://codeberg.org/alexandru-balan/Streamio-Install-Scripts). Please follow me there for updated versions.
+
 # Stremio Install Scripts
 
 A repository containing scripts that  are meant to install Stremio and its dependencies on systems that do not provide an official installation for Stremio.
