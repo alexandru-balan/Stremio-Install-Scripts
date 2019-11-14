@@ -1,4 +1,4 @@
-# The devlopment on this repo will continue as usually
+# The devlopment on this repo will continue
 
 # Stremio Install Scripts
 
