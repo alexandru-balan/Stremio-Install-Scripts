@@ -10,7 +10,7 @@ You probably need the proprietary media codecs in order to be able to play any o
 
 **Solus users:** you have the codecs preinstalled out of the box.
 
-**Fedora users:** you shoud see how to install rpmfusion repos (both free and non-free) then install all the codecs through the software center.
+**Fedora users:** you shoud see how to install rpmfusion repos (both free and non-free) then install all the codecs through the software center. **RPMFUSION Free is required for mpv media player libs which are a dependency for Stremio**
 
 **Arch users:** if not already installed, then you shoud probably install gstreamer and ffmpeg
 
