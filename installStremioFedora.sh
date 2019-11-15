@@ -41,7 +41,7 @@ compile_install() {
     echo -e "\e[93m\e[40m--------------------------------\e[0m"
     echo -e "\e[93m\e[40mCompiling and installing Stremio\e[0m"
     echo -e "\e[93m\e[40m--------------------------------\e[0m"
-    qmake
+    qmake-qt5
     if [ $? -ne 0 ]; then
         echo -e "\e[91m\e[40mCan't set the project up. QMAKE error !\e[0m"
         read -n 1 -s -r -p "Press any key to continue"
