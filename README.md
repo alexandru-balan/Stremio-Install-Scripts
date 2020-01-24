@@ -16,7 +16,7 @@ You probably need the proprietary media codecs in order to be able to play any o
 
 **Clear Linux users:** https://community.clearlinux.org/t/how-to-h264-etc-support-for-firefox-including-ffmpeg-install/195
 
-## Install on Fedora 30
+## Install on Fedora 31
 
 0. `sudo dnf install git` <-- Installs git so you can download my scripts
 1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
@@ -24,7 +24,7 @@ You probably need the proprietary media codecs in order to be able to play any o
 3. `chmod 755 installStremioFedora.sh` <-- Makes the script executable
 4. `./installStremioFedora.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
 
-## Install on Solus 4.0
+## Install on Solus 4.1
 
 0. `sudo eopkg it git` <-- Installs git so you can download my scripts
 1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
