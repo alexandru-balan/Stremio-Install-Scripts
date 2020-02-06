@@ -1,5 +1,3 @@
-# The devlopment on this repo will continue
-
 # Stremio Install Scripts
 
 A repository containing scripts that  are meant to install Stremio and its dependencies on systems that do not provide an official installation for Stremio.
