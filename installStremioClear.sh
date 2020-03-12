@@ -34,7 +34,7 @@ main_download() {
 }
 
 # Patching linking
-ptching() {
+patching() {
     echo -e "\e[93m\e[40m----------------------\e[0m"
     echo -e "\e[93m\e[40mPatching mpv libraries\e[0m"
     echo -e "\e[93m\e[40m----------------------\e[0m"
