@@ -1,3 +1,5 @@
+# Stremio appears to now support builds for major distros so I advise you to download the official builds [here](https://www.stremio.com/downloads/?utm_source=blog&utm_medium=sidebar%20widgets) if you are using Fedora or an Arch system
+
 # Stremio Install Scripts
 
 A repository containing scripts that  are meant to install Stremio and its dependencies on systems that do not provide an official installation for Stremio.
