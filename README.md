@@ -18,33 +18,18 @@ You probably need the proprietary media codecs in order to be able to play any o
 
 ## Install on Fedora 31
 
-0. `sudo dnf install git` <-- Installs git so you can download my scripts
-1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
-2. `cd Stremio-Install-Scripts` <-- Moves into the downloaded folder
-3. `chmod 755 installStremioFedora.sh` <-- Makes the script executable
-4. `./installStremioFedora.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
+`curl -fsSL https://raw.githubusercontent.com/alexandru-balan/Stremio-Install-Scripts/master/installStremioFedora.sh | sh`  <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
+
 
 ## Install on Solus 4.1
 
-0. `sudo eopkg it git` <-- Installs git so you can download my scripts
-1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
-2. `cd Stremio-Install-Scripts` <-- Moves into the downloaded folder
-3. `chmod 755 installStremioSolus.sh` <-- Makes the script executable
-4. `./installStremioSolus.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
+`curl -fsSL https://raw.githubusercontent.com/alexandru-balan/Stremio-Install-Scripts/master/installStremioSolus.sh | sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
 
 ## Install on Clear Linux (this one might take a lot to complete)
 *Clear linux installs a lot of other things beside the necessary deps (around 2GB worth of bundles) due to the way swupd works*
 
-0. `sudo swupd bundle-add git` <-- Installs git so you can download my scripts (Probably already installed)
-1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
-2. `cd Stremio-Install-Scripts` <-- Moves into the downloaded folder
-3. `chmod 755 installStremioClear.sh` <-- Makes the script executable
-4. `./installStremioClear.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
+`curl -fsSL https://raw.githubusercontent.com/alexandru-balan/Stremio-Install-Scripts/master/installStremioClear.sh | sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
 
 ## Install on Arch Linux
 
-0. `sudo pacman -S git` <-- Installs git so you can download my scripts
-1. `git clone https://github.com/alexandru-balan/Stremio-Install-Scripts.git` <-- Downloads the script
-2. `cd Stremio-Install-Scripts` <-- Moves into the downloaded folder
-3. `chmod 755 installStremioArch.sh` <-- Makes the script executable
-4. `./installStremioArch.sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
+`curl -fsSL https://raw.githubusercontent.com/alexandru-balan/Stremio-Install-Scripts/master/installStremioArch.sh | sh` <-- Installs Stremio (will ask for password to install dependencies and Stremio itself)
