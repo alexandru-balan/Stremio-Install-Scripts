@@ -25,7 +25,7 @@ main_download() {
     echo -e "\e[93m\e[40m-------------------\e[0m"
     echo -e "\e[93m\e[40mDownloading Stremio\e[0m"
     echo -e "\e[93m\e[40m-------------------\e[0m"
-    git clone --recurse-submodules https://github.com/Stremio/stremio-shell.git
+    git clone --recurse-submodules --depth 1 --shallow-submodules https://github.com/Stremio/stremio-shell.git
     if [ $? -ne 0 ]; then
         echo -e "\e[91m\e[40mWe could not download Stremio. Check your internet connection and try again!\e[0m"
         read -n 1 -s -r -p "Press any key to continue"
