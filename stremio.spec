@@ -79,5 +79,5 @@ do
 done
 
 %changelog
-* Fri Jan 28 2022 oran
-- 
+* Sun Jan 30 2022 lolsniperftw
+- .spec file for Stremio
