@@ -60,16 +60,20 @@ make_directories(){
 }
 
 check_rpms_folder(){
-    rpms="$(ls $rpm_dir/x86_64/Stremio-$1-* 2>/dev/null)"
-    if [ $? -eq 0 ]; then
-        while true; do
-            read -p "RPM of the same version is found. Do you wish to install it? [Y/N]" yn
-            case $yn in
-                [Yy]* ) install_rpm $1; break;;
-                [Nn]* ) break;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
+    if [ "$(ls -A $rpm_dir/x86_64/)" ]; then
+        rpms="$(ls $rpm_dir/x86_64/Stremio-$1-* 2>/dev/null)"
+        if [ $? -eq 0 ]; then
+            while true; do
+                read -p "RPM of the same version is found. Do you wish to install it? [Y/N]" yn
+                case $yn in
+                    [Yy]* ) install_rpm $1; break;;
+                    [Nn]* ) break;;
+                    * ) echo "Please answer yes or no.";;
+                esac
+            done
+        else
+            rm $rpm_dir/x86_64/*
+        fi
     fi
 }
 
