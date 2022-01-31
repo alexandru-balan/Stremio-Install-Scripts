@@ -4,8 +4,9 @@ spec_file="$PWD/stremio.spec"
 work_dir="$PWD/work"
 rpm_dir="$PWD/RPMS"
 download_dir="$PWD/stremio-shell"
-# Installing dependencies
 build_deps="nodejs wget librsvg2-devel librsvg2-tools mpv-libs-devel qt5-qtbase-devel qt5-qtwebengine-devel qt5-qtquickcontrols qt5-qtquickcontrols2 openssl-devel gcc make glibc-devel kernel-headers binutils rpmdevtools"
+
+# Installing dependencies
 dep_check_and_install() {
     echo -e "\e[93m\e[40m------------------\e[0m"
     echo -e "\e[93m\e[40mChecking Dependecies\e[0m"
@@ -13,12 +14,12 @@ dep_check_and_install() {
 
     for package in $build_deps
     do
-        if ! rpm -q $package > /dev/null ; then
+        if ! rpm -q $package > /dev/null ; then #checks if package exists and if not add it to missing_deps
                 missing_deps+=($package)
         fi
     done
     
-    if [[ ${#missing_deps[@]} > 0 ]];
+    if [[ ${#missing_deps[@]} > 0 ]]; #checks if missing packages are found
         then
             echo "${missing_deps[@]} missing"
             sudo dnf install ${missing_deps[@]}
@@ -45,6 +46,7 @@ main_download() {
     fi
 }
 
+#Making directories for building phase
 make_directories(){
     if [ ! -d "$work_dir" ]; then
         mkdir -p $work_dir
@@ -59,6 +61,7 @@ make_directories(){
     fi
 }
 
+#Checks if rpms already exist
 check_rpms_folder(){
     if [ "$(ls -A $rpm_dir/x86_64/)" ]; then
         rpms="$(ls $rpm_dir/x86_64/Stremio-$1-* 2>/dev/null)"
@@ -77,6 +80,7 @@ check_rpms_folder(){
     fi
 }
 
+#Building the rpm package
 generate_rpm(){
     pkg_version=$(git rev-parse --short HEAD)
     check_rpms_folder $pkg_version
@@ -84,11 +88,13 @@ generate_rpm(){
     install_rpm $pkg_version
 }
 
+#Installing the built package
 install_rpm(){
     sudo dnf install $rpm_dir/x86_64/Stremio-$1-*
     exit_script
 }
 
+#Clean up
 exit_script(){
     cd ..
     rm -rf stremio-shell
